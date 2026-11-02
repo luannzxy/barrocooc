@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Exercício – Barroco</title>
+<style>
+:root{--bg:#faf7f2;--card:#fff;--tx:#222;--mut:#666;--bd:#ddd;--ac:#7a3b1d;--ok:#1f7a3a;--okb:#e3f4e8;--no:#b3261e;--nob:#fbe7e5;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17130f;--card:#231d17;--tx:#f0e9e0;--mut:#a89d90;--bd:#3d342b;--ac:#e0a77f;--ok:#7fd49a;--okb:#16301f;--no:#ff9a92;--nob:#3a1c1a}}
+:root[data-theme="dark"]{--bg:#17130f;--card:#231d17;--tx:#f0e9e0;--mut:#a89d90;--bd:#3d342b;--ac:#e0a77f;--ok:#7fd49a;--okb:#16301f;--no:#ff9a92;--nob:#3a1c1a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 Georgia,serif}
+main{max-width:720px;margin:0 auto;padding:16px}
+h1{font-size:1.4rem;color:var(--ac);margin:8px 0}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);padding:8px 0;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--bd);z-index:5;font-family:system-ui,sans-serif;font-size:.9rem}
+button.r{background:var(--ac);color:var(--bg);border:0;border-radius:8px;padding:8px 14px;font-size:.9rem}
+.q{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px;margin:16px 0}
+.q h2{font-size:.85rem;color:var(--mut);margin:0 0 6px;font-family:system-ui,sans-serif}
+.q p{margin:0 0 10px;overflow-wrap:anywhere}
+.o{display:block;width:100%;text-align:left;background:transparent;color:var(--tx);border:1px solid var(--bd);border-radius:8px;padding:10px;margin:6px 0;font:inherit;font-size:.95rem}
+.o b{color:var(--ac);margin-right:6px}
+.o.ok{background:var(--okb);border-color:var(--ok)}
+.o.no{background:var(--nob);border-color:var(--no)}
+.fb{font-family:system-ui,sans-serif;font-size:.85rem;margin-top:6px}
+</style>
+</head>
+<body>
+<main>
+<h1>Exercício – Barroco</h1>
+<div class="bar"><span id="sc">Acertos: 0 / 0 (9 questões)</span><button class="r" onclick="reset()">Reiniciar</button></div>
+<div id="qs"></div>
+</main>
+<script>
+const Q=[
+{t:"O culto do contraste, pessimismo, acumulação de elementos, niilismo temático, tendência para a descrição e preferência pelos aspectos cruéis, dolorosos, sangrentos e repugnantes, são características do:",o:["Barroco","Realismo","Rococó","Naturalismo","Romantismo"],a:0},
+{t:"Assinale o texto que, pela linguagem e pelas ideias, pode ser considerado como representante da corrente barroca.",o:["“Brando e meigo sorriso se deslizava em seus lábios; os negros caracóis de suas belas madeixas brincavam, mercê do Zéfiro, sobre suas faces... e ela também suspirava.”","“Estiadas amáveis iluminavam instantes de céus sobre ruas molhadas de pipilos nos arbustos dos squares. Mas a abóbada de garoa desabava os quarteirões.”","“Os sinos repicavam numa impaciência alegre. Padre Antônio continuou a caminhar lentamente, pensando que cem vezes estivera a cair, cedendo à fatalidade da herança e à influência do meio que o arrastavam para o pecado.”","“De súbito, porém, as lancinantes incertezas, as brumosas noites pesadas de tanta agonia, de tanto pavor de morte, desfaziam-se, desapareciam completamente como os tênues vapores de um letargo...”","“Ah! Peixes, quantas invejas vos tenho a essa natural irregularidade! A vossa bruteza é melhor que o meu alvedrio. Eu falo, mas vós não ofendeis a Deus com as palavras: eu lembro-me, mas vós não ofendeis a Deus com a memória: eu discorro, mas vós não ofendeis a Deus com o entendimento: eu quero, mas vós não ofendeis a Deus com a vontade.”"],a:4,e:"É um trecho do Sermão de Santo Antônio aos Peixes, de Padre Antônio Vieira: raciocínio engenhoso e jogo de ideias (conceptismo)."},
+{t:"“Nasce o Sol, e não dura mais que um dia. Depois da luz, se segue a noite escura, Em tristes sombras morre a formosura, Em contínuas tristezas a alegria.”\n\nNa estrofe acima, de um soneto de Gregório de Matos Guerra, a principal característica do Barroco é:",o:["culto da Natureza","a utilização de rimas alternadas","a forte presença de antíteses","culto do amor cortês","uso de aliterações"],a:2,e:"Luz × noite, formosura × sombras, alegria × tristeza: oposição de ideias é antítese."},
+{t:"O bifrontismo do homem, santo e pecador; o impulso pessoal prevalecendo sobre normas ditadas por modelos; o culto do contraste; a riqueza de pormenores – são traços constantes da:",o:["composição poética parnasiana","poesia simbolista","produção poética arcádica de inspiração bucólica","poesia barroca","poesia condoreirista"],a:3},
+{t:"“Que falta nesta cidade? Verdade. Que mais por sua desonra? Honra. Falta mais que se lhe ponha? Vergonha. O demo a viver se exponha, Por mais que a fama a exalta, Numa cidade onde falta Verdade, honra, vergonha.” Pode-se reconhecer nos versos acima, de Gregório de Matos:",o:["caráter de jogo verbal próprio do estilo barroco, a serviço de uma crítica, em tom de sátira, do perfil moral da cidade da Bahia.","caráter de jogo verbal próprio da poesia religiosa do século XVI, sustentando piedosa lamentação pela falta de fé do gentio.","estilo pedagógico da poesia neoclássica, por meio da qual o poeta se investe das funções de um autêntico moralizador.","caráter de jogo verbal próprio do estilo barroco, a serviço da expressão lírica do arrependimento do poeta pecador.","estilo pedagógico da poesia neoclássica, sustentando em tom lírico as reflexões do poeta sobre o perfil moral da cidade da Bahia."],a:0},
+{t:"“Entre os semeadores do Evangelho há uns que saem a semear, há outros que semeiam sem sair. Os que saem a semear são os que vão pregar à Índia, à China, ao Japão; os que semeiam sem sair são os que se contentam com pregar na pátria. Todos terão sua razão, mas tudo tem sua conta. Aos que têm a seara em casa, pagarlhes-ão a semeadura; aos que vão buscar a seara tão longe, hão-lhes de medir a semeadura, e hão-lhes de contar os passos. Ah! dia do juízo! Ah! pregadores! Os de cá, achar-vos-ei com mais paço; os de lá, com mais passos...”\n\nEssa passagem é representativa de uma das tendências estéticas típicas da prosa seiscentista, a saber:",o:["Sebastianismo, isto é, a celebração do mito da volta de D. Sebastião, rei de Portugal, morto na batalha de Alcácer-Quibir.","a busca do exotismo e da aventura ultramarina, presentes nas crônicas e narrativas de viagem.","a exaltação do heroico e do épico, por meio das metáforas grandiloquentes da epopeia.","lirismo trovadoresco, caracterizado por figuras de estilo passionais e místicas.","Conceptismo, caracterizado pela utilização constante dos recursos da dialética."],a:4,e:"Trecho do Sermão da Sexagésima, de Vieira: jogo de conceitos (paço × passos) e raciocínio dialético."},
+{t:"“Basta, senhor, que eu, porque roubo em uma barca, sou ladrão, e vós, porque roubais em uma armada, sois imperador? Assim é. O roubar pouco é culpa, o roubar muito é grandeza: o roubar com pouco poder faz os piratas, o roubar com muito, os Alexandres... O ladrão que furta para comer, não vai nem leva ao inferno: os que não só vão, mas que levam, de que eu trato, são os outros - ladrões de maior calibre e de mais alta esfera... Os outros ladrões roubam um homem, estes roubam cidades e reinos; os outros furtam debaixo de seu risco, estes, sem temor nem perigo; os outros se furtam, são enforcados, estes furtam e enforcam.” (Sermão do bom ladrão, Pe. Antonio Vieira)\n\nEm relação ao estilo empregado por Vieira neste trecho, pode-se afirmar:",o:["autor recorre ao Cultismo da linguagem com o intuito de convencer o ouvinte e por isto cria um jogo de imagens.","Vieira recorre ao preciosismo da linguagem, isto é, através de fatos corriqueiros, cotidianos, procura converter o ouvinte.","Padre Vieira emprega, principalmente, o Conceptismo, ou seja, o predomínio das idéias, da lógica, do raciocínio.","pregador procura ensinar preceitos religiosos ao ouvinte, o que era prática comum entre os escritores gongóricos."],a:2},
+{t:"Assinale a alternativa incorreta.",o:["Julgada em bloco, a literatura brasileira do quinhentismo é uma típica manifestação barroca.","Na poesia de Gregório de Matos, percebe-se o dualismo barroco: mistura de religiosidade e sensualismo, misticismo e erotismo, valores terrenos e aspirações espirituais.","A literatura no Brasil colonial é clássica, tendo nascido pela mão dos jesuítas, com uma intenção doutrinária.","Com Antônio Vieira, a estética barroca atinge o seu ponto alto em prosa no Brasil.","Não se deve dizer que a literatura seiscentista brasileira seja inferior por ser barroca, mas sim que é uma literatura barroca de qualidade inferior, com exceções raras."],a:2},
+{t:"Considere as seguintes afirmações sobre o Barroco brasileiro:\n\nI. A arte barroca caracteriza-se por apresentar dualidades, conflitos, paradoxos e contrastes, que convivem tensamente na unidade da obra.\n\nII. O conceptismo e o cultismo, expressões da poesia barroca, apresentam um imaginário bucólico, sempre povoado de pastoras e ninfas.\n\nIII. A oposição entre Reforma e Contrarreforma expressa, no plano religioso, os mesmos dilemas de que o Barroco se ocupa.\n\nQuais estão corretas:",o:["Apenas I.","Apenas II.","Apenas III.","Apenas I e III.","I, II e III."],a:3,e:"A II é do Arcadismo (bucolismo), não do Barroco."}
+];
+const L="abcde";let st=[];
+function upd(){const d=st.filter(x=>x!=null).length,c=st.filter((x,i)=>x===Q[i].a).length;document.getElementById("sc").textContent="Acertos: "+c+" / "+d+" (9 questões)"}
+function render(){st=Q.map(()=>null);const box=document.getElementById("qs");box.innerHTML="";
+Q.forEach((q,i)=>{const d=document.createElement("div");d.className="q";
+d.innerHTML="<h2>Questão "+(i+1)+"</h2><p>"+q.t.replace(/\n\n/g,"</p><p>")+"</p>";
+q.o.forEach((x,j)=>{const b=document.createElement("button");b.className="o";b.innerHTML="<b>"+L[j]+")</b>";b.append(x);b.onclick=()=>pick(i,j,d);d.append(b)});
+const f=document.createElement("div");f.className="fb";d.append(f);box.append(d)});upd()}
+function pick(i,j,d){if(st[i]!=null)return;st[i]=j;const q=Q[i],bs=d.querySelectorAll(".o");
+bs[q.a].classList.add("ok");if(j!==q.a)bs[j].classList.add("no");
+const f=d.querySelector(".fb");f.textContent=(j===q.a?"Correto! ":"Errado. Resposta certa: "+L[q.a]+") ")+(q.e||"");f.style.color=j===q.a?"var(--ok)":"var(--no)";upd()}
+function reset(){render();scrollTo(0,0)}
+render();
+</script>
+</body>
+</html>
